@@ -30,9 +30,9 @@ class App extends Component {
 
   addToCart = (product) => {
     const { cart } = this.state;
-    if (cart.find((x) => x.name === product.name)) {
+    if (cart.find((x) => x.id === product.id)) {
       const newCart = cart.map((x) =>
-        x.name === product.name
+        x.id === product.id
           ? {
               ...x,
               amount: x.amount + 1,
