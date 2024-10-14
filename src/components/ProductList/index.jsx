@@ -9,7 +9,7 @@ export class ProductList extends Component {
     return (
       <>
         {products.map((product) => (
-          <Product addToCart={addToCart} key={product.name} product={product} />
+          <Product addToCart={addToCart} key={product.id} product={product} />
         ))}
       </>
     );
@@ -19,7 +19,10 @@ export class ProductList extends Component {
 ProductList.propTypes = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+      images: PropTypes.arrayOf(PropTypes.string).isRequired,
     })
   ).isRequired,
   addToCart: PropTypes.func.isRequired,

@@ -8,10 +8,10 @@ export class Product extends Component {
     return (
       <div className="card card-compact bg-base-100 w-80 shadow-xl m-2">
         <figure>
-          <img alt={product.name} src={product.img} />
+          <img alt={product.title} src={product.images[0]} />
         </figure>
         <div className="card-body">
-          <h3 className="card-title">{product.name}</h3>
+          <h3 className="card-title">{product.title}</h3>
           <p>Price: {product.price}</p>
           <div className="card-actions justify-end">
             <Button
@@ -29,9 +29,9 @@ export class Product extends Component {
 
 Product.propTypes = {
   product: PropTypes.shape({
-    name: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    img: PropTypes.string.isRequired,
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
   addToCart: PropTypes.func.isRequired,
 };
