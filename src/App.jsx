@@ -61,7 +61,7 @@ class App extends Component {
       this.state.productsToShow
     );
     return (
-      <div>
+      <div className="w-auto">
         <Navbar cart={this.state.cart} />
         <Layout>
           <ProductList

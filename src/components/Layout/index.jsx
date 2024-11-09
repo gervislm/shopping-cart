@@ -5,7 +5,7 @@ export class Layout extends Component {
   render() {
     return (
       <>
-        <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-4 mx-10 justify-center">
+        <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-4 mx-10 justify-center w-auto">
           {this.props.children}
         </main>
       </>
